@@ -1,44 +1,44 @@
-# **Context Menu Manager - Утилита для расширения контекстного меню проводника**
+# **Context Menu Manager - Utility for expanding the Explorer context menu**
 
-## **Описание проекта**
-Утилита добавляет полезные действия в контекстное меню проводника Windows, позволяя быстро выполнять часто используемые операции без необходимости ручного ввода команд.
+## **Project Description**
+The utility adds useful actions to the Windows Explorer context menu, allowing you to quickly perform frequently used operations without having to manually enter commands.
 
-## **Функциональные возможности**
-- Открытие командной строки (CMD) в текущей директории
-- Открытие PowerShell в текущей директории
-- Открытие WSL (Windows Subsystem for Linux) в текущей директории
-- Создание новых файлов с указанием имени и расширения
-- Управление доступными действиями через графический интерфейс
+## **Features**
+- Open command prompt (CMD) in the current directory
+- Open PowerShell in the current directory
+- Open WSL (Windows Subsystem for Linux) in the current directory
+- Create new files with the name and extension
+- Manage available actions via the graphical interface
 
-## **Требования к системе**
-- Операционная система: Windows 7/10/11
-- .NET Framework 4.0 или выше
-- Права администратора для изменения системного реестра
+## **System requirements**
+- Operating system: Windows 7/10/11
+- .NET Framework 4.0 or higher
+- Administrator rights to modify the system registry
 
-## **Установка**
-1. Скачайте последнюю версию программы из раздела [Releases](https://github.com/RashaHakerLevKanivets/ContextMenuManager/releases)
-2. Запустите файл ContextMenuManager.exe с правами администратора
-3. В открывшемся интерфейсе выберите нужные действия
-4. Нажмите кнопку "Сохранить" для применения изменений
+## **Installation**
+1. Download the latest version of the program from the [Releases] section (https://github.com/RashaHakerLevKanivets/ContextMenuManager/releases)
+2. Run the ContextMenuManager.exe file with administrator rights
+3. In the interface that opens, select the desired actions
+4. Click the "Save" button to apply the changes
 
-## **Компиляция из исходного кода**
-Для самостоятельной сборки потребуется компилятор C# (csc.exe):
+## **Compilation from source code**
+For self-assembly, you will need C# compiler (csc.exe):
 
 ```bash
 csc /target:winexe /reference:System.Windows.Forms.dll /out:ContextMenuManager.exe ContextMenuManager.cs
 ```
 
-## **Добавление новых команд**
-Для расширения функциональности:
-1. Отредактируйте файл ContextMenuManager.cs
-2. Добавьте новую команду в метод SaveSettings:
+## **Adding new commands**
+To extend functionality:
+1. Edit the ContextMenuManager.cs file
+2. Add a new command to the SaveSettings method:
 ```csharp
 ToggleContextMenu("CommandName", true, "Menu Text", "Command to execute");
 ```
-3. Реализуйте обработку команды в методе HandleCommand
+3. Implement command handling in the HandleCommand method
 
-## **Контрибуция**
-Приветствуются:
-- Сообщения об ошибках через Issues
-- Pull requests с улучшениями
-- Предложения по новому функционалу
+## **Contributions**
+Welcome:
+- Bug reports via Issues
+- Pull requests with improvements
+- Suggestions for new functionality
